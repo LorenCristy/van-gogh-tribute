@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Van Gogh</title>
+    <style>
+      h1 {
+        font-size: 70px;
+        text-align: center;
+        color: #ffff87;
+      }
+      h2 {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        text-align: center;
+        color: white;
+      }
+      img {
+        text-align: center;
+        display: block;
+        margin: 30px auto;
+        border-radius: 10px;
+      }
+      .full {
+        background: linear-gradient(
+          181deg,
+          rgb(2, 0, 97) 15%,
+          rgb(97, 149, 219) 158.5%
+        );
+        text-align: center;
+        padding: 10px 100px;
+        margin: 50px 300px;
+        border-radius: 30px;
+      }
+      p {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        color: white;
+        font-size: 25px;
+        line-height: 30px;
+      }
+      span {
+        color: #ffff87;
+      }
+      a {
+        color: #ffff87;
+        font-size: 15px;
+      }
+      button {
+        font-size: 28px;
+        color: black;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        padding: 30px;
+        margin: 25px auto;
+        background: #ffff87;
+        border-radius: 50px;
+        box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+        transition: all 100ms ease-in-out;
+        border-style: none;
+        border: 1px solid #ffff87;
+      }
+      button:hover {
+        background: rgb(29, 96, 222);
+        color: white;
+        cursor: pointer;
+      }
+      .mine {
+        color: #ffff87;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="full">
+      <h1>
+        Vincent
+        <em> van </em>
+        Gogh
+      </h1>
+      <h2>World of the Post-Impressionist</h2>
+      <br />
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/963/original/1920px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg?1665959166"
+        width="400px"
+      />
+      <hr />
+      <p>
+        <span>
+          <strong> Vincent Willem van Gogh </strong>
+        </span>
+        is one of the most famous historical painters in the world. He was born
+        in March 30, 1853 in Zundert, Netherlands. Van Gogh delved in to Post
+        Impressionist arts creating over 2,000 masterpieces. The Dutch artist
+        went through a series of unfortuante events before his fame which he has
+        incorporated into his acclaimed pieces such as The Starry Night, Cafe
+        Terrace at Night, Irises, and his many self-portraits.
+      </p>
+      <a href="https://en.wikipedia.org/wiki/Vincent_van_Gogh">
+        Read more on Wikipedia</a
+      >
+      <br />
+      <button>Want to Learn More</button>
+      <div class="mine">Created by Loren Tonacao</div>
+    </div>
+    <script>
+      function learn() {
+        let name = prompt("What is your name?");
+        let interested = prompt(
+          "Would you like to learn more about Vincent van Gogh?"
+        )
+          .toLowerCase()
+          .trim();
+        if (interested === "yes") {
+          alert(
+            "Thanks for signing up, " +
+              name +
+              ". We'll be in touch with you soon!"
+          );
+        } else {
+          alert(
+            "No worries, " +
+              name +
+              ". Just visit us again when you're interested!"
+          );
+        }
+      }
+      let learnButton = document.querySelector("button");
+      learnButton.addEventListener("click", learn);
+    </script>
+  </body>
+</html>
